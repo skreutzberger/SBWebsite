@@ -1,0 +1,558 @@
+/**
+    Main.css
+    SwiftyBeaver Website
+    
+    Created by Sebastian Kreutzberger on 1/23/16.
+    Copyright © 2016 SwiftyBeaver. All rights reserved.
+*/
+
+
+/* ===== RooneySans Font Start ====  */
+/**
+ * @license
+ * MyFonts Webfont Build ID 3175491, 2016-02-23T04:00:08-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: RooneySans-Medium by Jan Fromm
+ * URL: http://www.myfonts.com/fonts/jan-fromm/rooney-sans/medium/
+ * Copyright: Copyright (c) 2012-2014 by Jan Fromm. All rights reserved.
+ * Licensed pageviews: 50,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3175491
+ * 
+ * © 2016 MyFonts Inc
+*/
+@font-face {
+    font-family: 'RooneySans-Medium';
+    src: url('webfonts/307443_0_0.eot');
+    src: url('webfonts/307443_0_0.eot?#iefix') format('embedded-opentype'),
+    url('webfonts/307443_0_0.woff2') format('woff2'),
+    url('webfonts/307443_0_0.woff') format('woff'),
+    url('webfonts/307443_0_0.ttf') format('truetype');
+}
+
+h1, h2, h3, h4, h5 { 
+	font-family: "RooneySans-Medium", sans-serif;
+	font-weight: normal; 
+	font-style: normal; 
+}
+/* ===== RooneySans Font End ====  */
+
+body { 
+    margin: 27px 32px 32px 27px;
+
+    font-family: "Oxygen", sans-serif;
+    font-size: 14px;
+    color: white;
+
+    background: #052031;
+
+    
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#214358+0,071f33+100 */
+    /* original gradient: #214358 to #071f33 */
+    /* much darker gradient: #1d3a4d to #051726 */
+    /* just a bit darker gradient: #1f3e52 to #061b2b */
+    background: #1d3a4d;
+    background: -moz-linear-gradient(top, #1f3e52 0%, #061b2b 100%); 
+    background: -webkit-linear-gradient(top, #1f3e52 0%,#061b2b 100%); 
+    background: linear-gradient(to bottom, #1f3e52 0%,#061b2b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f3e52', endColorstr='#061b2b',GradientType=0);
+}
+
+#bg {
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+
+  	min-width: 50%;
+  	min-height: 50%;
+  	
+  	width: 100%;
+  	height: auto;
+}
+
+/* ===== Main Flexbox Elements ====  */
+
+.flexContainer {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.flexHeader, .flexFooter {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+
+.flexMain {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+
+
+/* ===== Header ====  */
+
+div.header {
+    display:flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.headerLogo {
+    flex-shrink: 1;
+    height: 40px;
+}
+
+.headerSpace {
+    flex-basis: 10px;
+    flex-grow: 1;
+    flex-shrink: 3;
+}
+
+.headerButton {
+    flex-shrink: 0;
+}
+
+
+@media (max-width: 480px) {
+    div.header {
+        flex-direction: column;
+    }
+}
+
+.logo {
+    display: block;
+    width: 187px;
+    height: 31px;
+    background: url("../img/swiftybeaver-logo.svg");
+    background-repeat: no-repeat;
+    background-size: 187px 31px;
+}
+
+.logo:hover {
+    cursor:pointer;
+}
+
+div.largeButton {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    width: 136px;
+    padding: 15px 18px 15px 18px;
+    color: white;
+    /*margin-top: -6px;*/
+}
+
+div.largeButton:hover {
+    background-color: rgba(255, 255, 255, 0.28);
+    cursor: pointer;
+}
+   
+div.githubLogo {
+    display: block;
+    width: 14.1px;
+    height: 17px;
+    background: url("../img/github-logo.svg");
+    background-repeat: no-repeat;
+    background-size: 14.1px 17px;
+    margin-right: 6px;
+    float:left;
+}
+
+
+/* ===== Footer ====  */
+
+div.footer {
+    display:flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 13px;
+}
+
+.footerCopyright, .footerLinks, .footerIcons {
+    flex-shrink: 1;
+}
+
+.footerSpace {
+    flex-basis: 10px;
+    flex-grow: 1;
+    flex-shrink: 3;
+}
+
+@media (max-width: 630px) {
+    div.footer {
+        flex-direction: column;
+    }
+    
+    .footerCopyright {
+        order: 2;
+        padding-top: 10px;
+    }
+    
+    .footerIcons {
+        margin-top: 10px;
+    }
+}
+
+.footer a, .footer a:link, .footer a:active {
+    margin-right: 15px;
+    float: left;
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .roundLogo {
+    display: block;
+    width: 28px;
+    height: 28px;
+    float:left;
+    margin-right: 14px;
+    margin-top: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 28px; 
+}
+
+.footer .roundLogo:hover {
+    background-color: rgba(255, 255, 255, 0.28);
+    cursor: pointer;
+}
+
+.footer .twtLogoSmall {
+    display: block;
+    background: url("../img/twt-logo.svg");
+    background-repeat: no-repeat;
+    background-size: 14px 12px;
+    background-position-x: 7px;
+    background-position-y: 8px;
+}
+
+.footer .fbkLogoSmall {
+    background: url("../img/fbk-logo.svg");
+    background-repeat: no-repeat;
+    background-size: 6px 13px;
+    background-position-x: 10.5px;
+    background-position-y: 8px;
+}
+
+.footer .githubLogoSmall {
+    background: url("../img/github-logo.svg");
+    background-repeat: no-repeat;
+    background-size: 12px 15px;
+    background-position-x: 7px;
+    background-position-y: 7px;
+}
+
+/* ===== Main: Landing Page ====  */
+
+
+div.main {
+
+}   
+ 
+.mainLandingPage {
+    margin-top: 90px;
+    flex-basis: 1170px; 
+    background: url("../img/striped-bg.png");
+    background-repeat: no-repeat;
+    background-size: 932px 525px;
+    background-position: top center;
+    min-height: 525px;
+}
+ 
+.lpTitle {
+    padding-top: 1px;
+}   
+
+.lpForm {
+    position: absolute;
+    top: 387px;
+    left: 50%;
+    margin-left: -265px;
+    z-index: 9999;
+}
+
+.mainLandingPage h1 {
+    font-size: 47px;
+    text-shadow: 0px 2px 9px rgba(5, 33, 49, 0.77);
+    text-align: center;
+    padding-top: 49px;
+    margin-bottom: -4px;
+}
+
+.mainLandingPage h2 {
+    font-family: "Oxygen", sans-serif;
+    font-size: 19px;
+    text-shadow: 0px 2px 4px rgba(5, 33, 49, 0.75);
+    text-align: center;
+
+}
+
+.mainLandingPage input {
+    width: 279px;
+    height: 63px;
+    border 1px solid white;
+    border-radius: 8px;
+    font-family: "Oxygen", sans-serif;
+    font-size: 16px;
+    color: #707A87;
+    color: #555d69;
+    letter-spacing: 0.05px;
+    padding: 20px;
+    outline: none;
+    -webkit-appearance: none;
+    /*box-shadow: 0px 2px 9px rgba(5, 33, 49, 0.77);
+    transition: box-shadow 0.5s, border 0.5s;*/
+}
+
+.mainLandingPage input[type="text"] {
+     border: solid 1px white;
+}
+
+.mainLandingPage input:focus {
+     box-shadow: 0 0 5px 2px #658ce0;
+     outline: none;
+}
+
+.mainLandingPage input[type="submit"] {
+    margin-left: 9px;
+    border: solid 1px #FC3B62;
+    background-color: #FC3B62;
+    color: white;
+    font-weight: bold;
+    width: 229px;
+}
+
+.mainLandingPage input[type="submit"]:focus {
+    background-color: #df123b;
+    border: solid 1px #df123b;
+    box-shadow: 0px 2px 9px rgba(5, 33, 49, 0.77);
+    outline: none;
+} 
+
+.mainLandingPage input[type="submit"]:hover {
+    background-color: #df123b;
+    border: solid 1px #df123b;
+    /*box-shadow: 0 0 5px 2px #c1082e;*/
+    cursor: pointer;
+}   
+
+*:focus {
+    outline: none;
+    outline: 0 none;
+    border: transparent;
+}
+
+
+/* Large Share Buttons */
+
+.mainLandingPage div.twtLogoLarge {
+    display: block;
+    width: 24.71px;
+    height: 20px;
+    background: url("../img/twt-logo.svg");
+    background-repeat: no-repeat;
+    background-size: 24.71px 20px;
+    float:left;
+    margin-right: 16px;
+}
+
+.mainLandingPage div.fbkLogoLarge {
+    display: block;
+    width: 10.51px;
+    height: 22.09px;
+    background: url("../img/fbk-logo.svg");
+    background-repeat: no-repeat;
+    background-size: 10.51px 22.09px;
+    float:left;
+    margin-right: 16px;
+}
+
+.mainLandingPage .largeSocialButton {
+    display: none;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+    box-shadow: 0px 2px 9px rgba(5, 33, 49, 0.77);
+}
+
+.largeSocialButton:hover {
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.largetwtButton {
+    border-color: #00ACED;
+    background-color: #00ACED;
+    margin-left: 30px;
+    padding: 21px 30px 21px 20px;
+}
+
+.largefbkButton {
+    border-color: #4769B2;
+    background-color: #4769B2;
+    margin-left: 15px;
+    padding: 21px 27px 20px 20px;
+}
+
+.largetwtButton:hover {
+    border-color: #16bffc;
+    background-color: #16bffc;
+}
+
+.largefbkButton:hover {
+    border-color: #6e93e4;
+    background-color: #6e93e4;
+}
+
+
+/* responsive landingpage title and form  */    
+
+@media (max-width: 990px) {
+    .mainLandingPage h1 {
+        padding-top: 69px;
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 810px) {
+    .mainLandingPage h1 { 
+        padding-top: 10px;
+        font-size: 46px;
+    }
+    .mainLandingPage h2 { font-size: 16px;}
+}
+
+
+@media (max-width: 590px) {
+    .mainLandingPage h1 { 
+        padding-top: 20px;
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 547px) {
+    .mainLandingPage h1 { 
+        font-size: 38px;
+    }
+    .mainLandingPage h2 { margin-top: 5px;}
+    
+    .lpForm {
+        top: 388px;
+        left: 260px;
+        width: 100%;
+    }
+    
+    .lpForm input {
+        width: 85%;
+    }
+    
+    .lpSubmit {
+        margin-top: 10px;
+    }
+}
+
+
+@media (max-width: 490px) {
+    .mainLandingPage h1 {margin-top: -10px;}
+    .lpForm {top: 398px;}
+}
+
+@media (max-width: 460px) {
+    .largeSocialButton { 
+        display: block; 
+        margin-bottom: 10px; 
+        margin-left: 90px;
+    }
+}
+
+
+/* ===== Standard Pages ====  */
+
+.standard {
+    width: 720px;
+    margin: 0 auto; 
+    margin-bottom: 100px;
+}
+
+.standard .row div {
+    float: left;
+}
+
+@media (max-width: 790px) {
+    .standard {width: 100%;}
+}
+
+@media (max-width: 720px) {
+    .standard .row div {
+       margin: 45px auto !important;
+       width: 200px;
+       display: block;
+       float: none; 
+       text-align: center;
+    }
+}
+
+.standard p {
+    font-size: 15px;
+    line-height: 23px;
+    margin-top: 0px;
+}
+
+h1 {
+    font-size: 47px;
+    text-shadow: 0px 2px 9px rgba(5, 33, 49, 0.77);
+    text-align: center;
+    padding-top: 49px;
+    margin-bottom: -4px;
+}
+
+.standard h2 { 
+    font-size: 30px;
+    text-shadow: 0px 2px 4px rgba(5, 33, 49, 0.75);
+    text-align: center;
+}
+
+.standard h3 {
+    font-family: "Oxygen", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 30px;
+    padding-bottom: 0px;
+    margin-bottom: 8px;
+}
+
+.standard a, .standard a:link, .standard a:active {
+    text-decoration: none;
+    color: white;
+}
+
+.standard a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+

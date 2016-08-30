@@ -1,0 +1,72 @@
+#embed("embeds/header")
+
+<body>
+    <div class="flexContainer">
+        <header class="flexHeader">
+            <div class="menu">
+                <div class="logo">
+                    <a class="logo" href="/" title="SwiftyBeaver Home"></a>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <div class="main standard">
+                <h1>Contact</h1>
+                
+                <div class="row" style="margin-top: 50px;">
+                    <div style="margin-left: 22%; margin-right: 13%;">
+                        <h3>General &amp; Support</h3>
+                            <p>
+                            <a href="mailto:hello@swiftybeaver.com">hello@swiftybeaver.com</a>
+                            </p>
+                            </div>
+                            <div>
+                            <h3>Investor Relations</h3>
+                            <p>
+                            <a href="mailto:invest@swiftybeaver.com">invest@swiftybeaver.com</a>
+                            </p>
+                            </div>
+                            </div>
+                            
+                            <div class="row" style="margin-top: 50px;">
+                            <div style="margin-left: 22%; margin-right: 15%;">
+                                <h3>Public Relations</h3>
+                                <p>
+                                <a href="mailto:pr@swiftybeaver.com">pr@swiftybeaver.com</a>
+                                </p>
+                            </div>
+                            <div>
+                                <h3>Human Resources</h3>
+                                <p>
+                                <a href="mailto:jobs@swiftybeaver.com">jobs@swiftybeaver.com</a>
+                                </p>
+                            </div>
+                            </div>
+                    
+                    <div class="row" style="margin-top: 50px;">
+                        <div style="margin-left: 22%; margin-right: 16%;">
+                            <h3>Company</h3>
+                            <p>
+                            SwiftyBeaver GmbH<br/>
+                            Kurfürstendamm 194<br/>
+                            10707 Berlin<br/>
+                            Germany
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Social Media</h3>
+                            <p>
+                            <a href="https://twitter.com/SwiftyBeaver" target="_blank">Twitter</a><br/>
+                            <a href="https://facebook.com/SwiftyBeaver" target="_blank">Facebook</a><br/>
+                            <a href="https://medium.com/swiftybeaver-blog" target="_blank">Medium</a><br/>
+                            <a href="https://github.com/SwiftyBeaver" target="_blank">Github</a>
+                            </p>
+                        </div>                                  
+                    </div> 
+                    
+                    <div style="clear: both;"></div>
+                </div>
+                </main>
+
+#embed("embeds/footer")

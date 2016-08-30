@@ -1,0 +1,216 @@
+#embed("embeds/header")
+
+<body class="homepage">
+    <div class="flexContainer">
+        <header class="homepage">
+            #embed("embeds/menu")
+            
+            <div class="teaser">
+                <h1>The World’s First Logging Platform for Swift</h1>
+                <h2>Access your app logs in development &amp; release with end-to-end encryption</h2>
+                    <center>
+                    <div class="largeButton redButton downloadButton" onclick="download();">
+                    <div class="iMacIconLarge"></div>
+                    Free Download
+                    </div>
+            <div class="macbook"></div>
+            </center>
+            </div>
+    </header>
+
+<main class="homepage">
+    <div class="mainContent">
+        
+        <div class="features">
+            <div class="headlineContainer">
+                <hr/>
+                <h3>The platform includes …</h3>
+                <hr/>
+            </div>
+            <center><div class="downArrow"></div></center>
+            
+            <div class="container">
+                <div class="circle frameworkCircle circleShadow"></div>
+                <div class="content contentLeft">
+                    <h2>Swift Framework</h2>
+                    The most popular &amp; easy-to-use logging framework for Swift lets you log to Xcode Console, a file and the SwiftyBeaver Crypto Cloud. User analytics, release logging &amp; Swift 3 compatibility included!
+                    </div>
+                    <div class="stripe redStripe"></div>
+                    </div>
+                    <hr class="full"/>
+                    
+                    <div class="container reverse">
+                    <div class="circle cloudCircle circleShadow"></div>
+                    <div class="content contentRight">
+                    <h2>Crypto Cloud</h2>
+                    Send your logging &amp; analytics data from your app securely to the cloud without the need for own servers or backend systems. All data stays fully encrypted on our servers and meets highest compliance regulations due to end-to-end encryption. API, unlimited data &amp; optional on-premise hosting included!
+                    </div>
+                    <div class="stripe yellowStripe"></div>
+                    </div>
+                    <hr class="full"/>
+                    
+                    <div class="container">
+                    <div class="circle appCircle circleShadow"></div>
+                    <div class="content contentLeft">
+                    <h2>Mac App</h2>
+                    The world’s first native Mac App for logging lets you instantly search and filter your logs with zero latency. All data is stored on your Mac in a SQLite database and can be easily exported for even deeper processing.<br/><br/>
+                    Live stream / real-time, user centric, searchable, own your data (export, mining), zero latency, monitor multiple apps in parallel, put next to Xcode.
+                    </div>
+                    <div class="stripe greenStripe"></div>
+                    </div>
+                    </div>
+        
+        <div class="users">
+                    <hr class="full"/>
+                    <div class="headlineContainer">
+                    <hr/>
+                    <h3>What people say</h3>
+                    <hr/>
+                    </div>
+                    
+                    <div class="container">
+                    
+                    <div class="item">
+                    <div class="testimonial">
+                    "Your app users' logs are sent to the cloud, and troubleshooting is quicker and easier than ever before. It's helping me develop apps a lot."
+                    </div>
+                    <div class="photo userPhotoHiroshi redBorder"></div>
+                    <div class="name">Hiroshi Kimura</div>
+                    <div class="company">eureka, Inc.</div>
+                    <hr class="full"/>
+                    </div>
+                    
+                    <div class="item">
+                    <div class="testimonial">
+                    "SwiftyBeaver is everything you want. It's lightweight, highly configurable and really easy to use and integrate. Awesome! Awesome! Awesome!"
+                    </div>
+                    <div class="photo userPhotoJeff greenBorder"></div>
+                    <div class="name">Jeff Roberts</div>
+                    <div class="company">Brax.tv</div>
+                    <hr class="full"/>
+                    </div>
+                    
+                    <div class="item">
+                    <div class="testimonial">
+                    "SwiftyBeaver is a great solution to improve my app by seeing error logs from user devices. It's a revolutionary logging platform!"
+                    </div>
+                    <div class="photo userPhotoDaniel blueBorder"></div>
+                    <div class="name">Daniel Riege</div>
+                    <div class="company">MyKeychain</div>
+                    <hr class="full"/>
+                    </div>
+                    
+                    <div class="item">
+                    <div class="testimonial">
+                    "With SwiftyBeaver, we've been able to quickly gain insightful information that we couldn't get with other tools."
+                    </div>
+                    <div class="photo userPhotoMark grayBorder"></div>
+                    <div class="name">Mark Schultz</div>
+                    <div class="company">Pluralsight</div>
+                    </div>
+                    
+                    <div class="item">
+                    <div class="testimonial">
+                    "Finally we can see what our users really need to have a great experience with our apps. How could we ever live without it?"
+                    </div>
+                    <div class="photo userPhotoChristoffer yellowBorder"></div>
+                    <div class="name">Christoffer Tews</div>
+                    <div class="company">Vukee</div>
+                    <hr class="full"/>
+                    </div>
+                    
+                    <div class="item">
+                    <div class="testimonial">
+                    "We’ve adopted SwiftyBeaver as it provided us with insightful information on how our apps are performing in the wild."
+                    </div>
+                    <div class="photo userPhotoJamie grayBorder"></div>
+                    <div class="name">Jamie Sciban</div>
+                    <div class="company">Mentally Friendly</div>
+                    <hr class="full"/>
+                    </div>
+                    
+                    </div>
+                    </div>
+                    
+        <div class="plans">
+                    <hr class="full"/>
+                    <div class="headlineContainer">
+                    <hr/>
+                    <h3>Plans &amp; Pricing</h3>
+                    <hr/>
+                    </div>
+                    
+                    <div class="container">
+                    
+                    <div class="item">
+                    <div class="stripe redStripe"></div>
+                    <div class="name">Free</div>
+                    <hr class="divider"/>
+                    <div class="price">$0</div>
+                    <ul>
+                    <li>1 hour local &amp; cloud history *</li>
+                    <li>Unlimited apps</li>
+                    <li>Limited traffic</li>
+                    <li><b>For development</b></li>
+                    </ul>
+                    <center>
+                    <div class="largeButton redButton" onclick="download();">Download</div>
+                </center>
+            </div>
+            
+            <div class="item">
+                <div class="stripe yellowStripe"></div>
+                <div class="name">Personal</div>
+                <hr class="divider"/>
+                <div class="price">$9</div>
+                <ul>
+                    <li>7 days cloud history *</li>
+                    <li>Unlimited local history</li>
+                    <li>Unlimited apps</li>
+                    <li>Unlimited traffic</li>
+                    <li>No sharing of logs</li>
+                    <li><b>For development &amp; release</b></li>
+                        </ul>
+                        <center>
+                        <div class="largeButton yellowButton" onclick="download();">Upgrade in-app</div>
+            </center>
+        </div>
+        
+        <div class="item">
+            <div class="stripe greenStripe"></div>
+            <div class="name">Organization</div>
+            <hr class="divider"/>
+            <div class="price">$25</div>
+            <ul>
+                <li>14 days cloud history *</li>
+                <li>Unlimited local history</li>
+                <li>Unlimited apps</li>
+                <li>Unlimited traffic</li>
+                <li>3 developers included **</li>
+                <li>Sharing of logs with team</li>
+                <li><b>For development &amp; release</b></li>
+                    </ul>
+                    <center>
+                    <div class="largeButton greenButton" onclick="download();">Upgrade in-app</div>
+        </center>
+    </div>
+    </div>
+    
+    <div class="enterpriseText">
+        <a href="/contact.html"><b>Contact us</b></a> for our Enterprise Plan to use your own servers.
+    </div>
+    
+    <div class="planSmallText">
+        You can change your plan at any time. All plans are monthly recurring. <br/>
+        * Logs in the cloud are automatically downloaded for local access. 
+        <br/>
+        ** Each additional user costs $10. Volume discounts possible. 
+    </div>
+    
+    
+    </div>
+        
+</div>
+</main>
+
+#embed("embeds/footer")

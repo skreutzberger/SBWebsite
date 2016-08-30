@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="25px" height="24px" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>iMac icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-page-" transform="translate(-493.000000, -282.000000)" fill="#FFFFFF">
+            <g id="elements" transform="translate(112.000000, 137.000000)">
+                <g id="button" transform="translate(358.000000, 124.000000)">
+                    <path d="M23,22.9945615 C23,21.8929956 23.8897632,21 25.0035949,21 L45.9964051,21 C47.10296,21 48,21.9023438 48,22.9945615 L48,40.0054385 C48,41.1070044 47.1102368,42 45.9964051,42 L25.0035949,42 C23.89704,42 23,41.0976562 23,40.0054385 L23,22.9945615 Z M25,23 L46,23 L46,37 L25,37 L25,23 Z M31,44 C31,43.4477153 31.4463114,43 31.9975446,43 L39.0024554,43 C39.553384,43 40,43.4438648 40,44 C40,44.5522847 39.5536886,45 39.0024554,45 L31.9975446,45 C31.446616,45 31,44.5561352 31,44 Z M35.5,41 C36.3284271,41 37,40.3284271 37,39.5 C37,38.6715729 36.3284271,38 35.5,38 C34.6715729,38 34,38.6715729 34,39.5 C34,40.3284271 34.6715729,41 35.5,41 Z" id="iMac-icon"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,59 @@
+/* SwiftyBeaver Theme for Helpscout Docs */
+
+@font-face {
+    font-family: 'RooneySans-Medium';
+    src: url('//swiftybeaver.com/css/webfonts/307443_0_0.eot');
+    src: url('//swiftybeaver.com/css/webfonts/307443_0_0.eot?#iefix') format('embedded-opentype'),
+    url('//swiftybeaver.com/css/webfonts/307443_0_0.woff2') format('woff2'),
+    url('//swiftybeaver.com/css/webfonts/307443_0_0.woff') format('woff'),
+    url('//swiftybeaver.com/css/webfonts/307443_0_0.ttf') format('truetype');
+}
+
+h1, h2, h3, h4, h5 { 
+	font-family: "RooneySans-Medium", sans-serif;
+    font-weight: normal; 
+	font-style: normal; 
+}
+
+#fullArticle h3 {
+    font-size: 22px !important; /* default is 21 */
+}
+
+/*
+h1, h2, h3, h4, h5 {
+    font-family: "Oxygen", sans-serif;
+}
+*/
+
+#fullArticle h2, #fullArticle h3 {
+    margin-top: 45px !important; /* 40 */
+}
+
+
+/*retina logo */
+#mainNav .brand span {
+	display: inline-block;
+	text-indent: -9000px;
+	width: 178px;
+	height: 28px;
+	background: url("//swiftybeaver.com/img/helpscout/logo_helpscout-356x56.png") no-repeat 0 0;
+	background-size: 100%;
+}
+
+.navbar, .navbar-inner {
+    background: #1d3a4d !important;
+    /*    
+    background: -moz-linear-gradient(top, #1f3e52 0%, #061b2b 100%) !important; 
+    background: -webkit-linear-gradient(top, #1f3e52 0%,#061b2b 100%) !important; 
+    background: linear-gradient(to bottom, #1f3e52 0%,#061b2b 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f3e52', endColorstr='#0d2a40',GradientType=0) !important;
+    */
+    
+}
+
+/*
+#fullArticle p, #fullArticle li, #fullArticle a {
+    font-size: 15px !important;
+    line-height: 23px !important;
+}
+*/

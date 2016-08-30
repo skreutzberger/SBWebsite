@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="11px" height="23px" viewBox="0 0 11 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>facebook-logo-large</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Landing-page-2" sketch:type="MSArtboardGroup" transform="translate(-616.000000, -417.000000)" fill="#FFFFFF">
+            <g id="Elements" sketch:type="MSLayerGroup" transform="translate(112.000000, 240.000000)">
+                <g id="Buttons" transform="translate(237.000000, 156.000000)" sketch:type="MSShapeGroup">
+                    <g id="Share-to-facebook" transform="translate(242.000000, 0.000000)">
+                        <path d="M35.728093,24.7886141 C34.5030824,24.7457216 33.1616957,24.2655407 32.4930441,25.2843412 C32.1296242,25.8427419 32.0847072,27.2886564 32.0530611,28.4636458 L35.8230318,28.4636458 C35.523925,29.833616 35.3350688,30.953078 35.1145669,32.1413384 L32.0530611,32.1831926 L32.0530611,43.1637731 L27.7655237,43.1637731 L27.7655237,32.1831926 L25.3155024,32.1831926 L25.3155024,28.4636458 L27.7655237,28.4636458 C27.8696497,25.880915 27.5215425,23.5101174 28.8026994,22.2065019 C30.2441287,20.7385308 31.5263065,21.113582 35.728093,21.113582" id="facebook-logo-large"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

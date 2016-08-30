@@ -1,0 +1,7 @@
+{
+	"default": {
+		"port": 7020,
+		"host": "0.0.0.0",
+		"securityLayer": "none"
+	}
+}

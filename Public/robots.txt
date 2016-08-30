@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: 
+Disallow: /legal-notice.html
+Disallow: /imprint.html
+Disallow: /error.html

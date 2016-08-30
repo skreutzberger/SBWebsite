@@ -1,0 +1,60 @@
+<footer>
+    <div class="footer">
+        <div class="footerCopyright">© 2016 SwiftyBeaver</div>
+        <div class="footerSpace"></div>
+        <div class="footerLinks">
+            <a href="http://docs.swiftybeaver.com" target="_blank" title="Documentation">Docs</a>
+            <a href="https://medium.com/swiftybeaver-blog" target="_blank" title="Official Blog">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="legal-notice.html">Legal</a>
+        </div>
+        <div class="footerIcons">
+            <a href="https://github.com/SwiftyBeaver" title="SwiftyBeaver on Github" class="roundLogo githubLogoSmall" target="_blank"></a>
+            <a class="roundLogo twtLogoSmall" title="SwiftyBeaver on Twitter"></a>
+            <a class="roundLogo fbkLogoSmall" title="SwiftyBeaver on Facebook"></a>
+        </div>
+    </div>
+</footer>
+</div>
+
+<script type="text/javascript">
+    setTimeout(function(){setFooterLinks();},100);
+    
+    // sets links
+    function setFooterLinks() {
+        // footer links
+        var twitterLink = document.getElementsByClassName("twtLogoSmall")[0];
+        twitterLink.setAttribute('href', 'https://twitter.com/SwiftyBeaver');
+        twitterLink.setAttribute('target', '_blank');
+        var facebookLink = document.getElementsByClassName("fbkLogoSmall")[0];
+        facebookLink.setAttribute('href', 'https://facebook.com/SwiftyBeaver');
+        facebookLink.setAttribute('target', '_blank');
+    }
+
+function download() {
+    if (typeof clicky !== "undefined" && clicky !== null) {
+        clicky.goal(1586);
+    } else {
+        console.log("Clicky is missing");
+    }
+    var dlURL = "https://s3.amazonaws.com/swiftybeaver/";
+    dlURL += "SBMac.zip";
+    var dlTimeout = setTimeout(function(){window.location = dlURL;}, 1000);
+}
+</script>
+
+<script type="text/javascript">
+    var clicky_site_ids = clicky_site_ids || [];
+    clicky_site_ids.push(100929215);
+    (function() {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//static.getclicky.com/js';
+        ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+    })();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100929215ns.gif" /></p></noscript>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>SwiftyBeaver - #(title)</title>
+
+    <meta charset="UTF-8">
+    <meta name="charset" content="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SwiftyBeaver: the world’s first logging platform for Swift" />
+    <meta name="keywords" content="swift, logging, log, mac, encryption, development, analytics" />
+    <meta name="copyright" content="Copyright © 2016 SwiftyBeaver GmbH">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta http-equiv="pragma" content="no-cache">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#()214358">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <style type="text/css"></style>
+</head>
