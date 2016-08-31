@@ -20,6 +20,8 @@ let app = Droplet()
 
 // .html is cached for 30 minutes, assets for 1 month
 app.middleware.append(CacheControlMiddleware(shortTTL: 1800, longTTL: 2592000))
+// allow CORS requests from docs for webfonts and assets
+app.middleware.append(CorsMiddleware(origin: "http://docs.swiftybeaver.com", pathPatterns: ["webfonts", ".png", ".jpg", ".css"]))
 
 
 // MARK: Routes
