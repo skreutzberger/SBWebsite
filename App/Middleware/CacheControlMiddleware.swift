@@ -13,7 +13,16 @@ import HTTP
 
 final class CacheControlMiddleware: Middleware {
     
-    // adjust the Cache-Control header for certain requested file types
+    private var shortTTL = 0
+    private var longTTL = 0
+    
+    /// shortTTL is used for short-cached dynamic elements, long for longer ones
+    init(shortTTL: Int, longTTL: Int) {
+        self.shortTTL = shortTTL
+        self.longTTL = longTTL
+    }
+    
+    /// adjust the Cache-Control header for certain requested file types
     func respond(to request: Request, chainingTo chain: Responder) throws -> Response {
         
         // get the file extension (suffix) from the requested path
@@ -28,10 +37,10 @@ final class CacheControlMiddleware: Middleware {
         var cacheTTL = 0
         
         if suffix == "" || suffix == "html" {
-            cacheTTL = 1800  // 30 min cache
+            cacheTTL = shortTTL
         } else {
             // all remaining are long-cached
-            cacheTTL = 2592000  // 1 month
+            cacheTTL = longTTL
         }
 
         print("setting cache-control for \(path) to \(cacheTTL) seconds")

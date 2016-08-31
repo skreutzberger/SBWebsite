@@ -18,7 +18,8 @@ let app = Droplet()
 
 // MARK: Middlewares
 
-app.middleware.append(CacheControlMiddleware())
+// .html is cached for 30 minutes, assets for 1 month
+app.middleware.append(CacheControlMiddleware(shortTTL: 1800, longTTL: 2592000))
 
 
 // MARK: Routes
