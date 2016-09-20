@@ -1,0 +1,11 @@
+{
+    "server": [
+        "file",
+        "errorpage",
+        "cache-control",
+        "cors"
+    ],
+    "client": [
+        
+    ]
+}

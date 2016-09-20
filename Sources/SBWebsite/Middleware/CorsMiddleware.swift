@@ -18,7 +18,7 @@ final class CorsMiddleware: Middleware {
     
     /// the given origin domain is allowed to access files 
     /// which contain given path pattern strings
-    init(origin: String, pathPatterns: [String]) {
+    init(_ origin: String, pathPatterns: [String]) {
         self.origin = origin
         self.pathPatterns = pathPatterns
     }

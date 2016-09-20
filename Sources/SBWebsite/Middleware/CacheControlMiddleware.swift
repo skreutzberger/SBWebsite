@@ -17,7 +17,7 @@ final class CacheControlMiddleware: Middleware {
     private var longTTL = 0
     
     /// shortTTL is used for short-cached dynamic elements, long for longer ones
-    init(shortTTL: Int, longTTL: Int) {
+    init(_ shortTTL: Int, longTTL: Int) {
         self.shortTTL = shortTTL
         self.longTTL = longTTL
     }
@@ -43,7 +43,7 @@ final class CacheControlMiddleware: Middleware {
             cacheTTL = longTTL
         }
 
-        print("setting cache-control for \(path) to \(cacheTTL) seconds")
+        log.verbose("setting cache-control for \(path) to \(cacheTTL) seconds")
         response.headers["Cache-Control"] = "public, max-age=\(cacheTTL)"
         response.headers["Vary"] = "Accept-Encoding"
         
