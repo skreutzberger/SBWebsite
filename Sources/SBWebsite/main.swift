@@ -9,27 +9,28 @@ import SwiftyBeaver
 
 // set-up SwiftyBeaver logging destinations (console, file, cloud, ...)
 // see http://docs.swiftybeaver.com/category/8-logging-destinations to learn more
-let console = ConsoleDestination()  // log to Xcode Console in color
+// let console = ConsoleDestination()  // log to Xcode Console in color
 let file = FileDestination()  // log to file
 file.logFileURL = URL(string: "file:///tmp/sbwebsite.log")! // set log file
 file.minLevel = .debug // no .verbose logging to file
-let sbProvider = SwiftyBeaverProvider(destinations: [console, file])
+let sbProvider = SwiftyBeaverProvider(destinations: [file]) // add console to the array if used
 
 
 // MARK: Middleware
 
-var middleware: [String: Middleware]? = [
-    "cache-control": CacheControlMiddleware(1800, longTTL: 2592000),
+var middleware: [Middleware]? = [
+    // set cache control for HTML files to a short TTL and everything else to a long TTL
+    CacheControlMiddleware(1800, longTTL: 2592000),
     // allow CORS requests from docs for webfonts and assets
-    "cors": CorsMiddleware("http://docs.swiftybeaver.com", pathPatterns: ["webfonts", ".png", ".jpg", ".css"]),
+    CorsMiddleware("http://docs.swiftybeaver.com", pathPatterns: ["webfonts", ".png", ".jpg", ".css"]),
     // error pages including 404, WORK IN PROGRESS
-    "errorpage": ErrorPageMiddleware("")
+    ErrorPageMiddleware("")
 ]
 
 
 // MARK: Droplet
 
-let app = Droplet(availableMiddleware: middleware, initializedProviders:[sbProvider])
+let app = Droplet(staticServerMiddleware: middleware, initializedProviders:[sbProvider])
 let log = app.log.self // to avoid writing app.log all the time
 
 

@@ -1,9 +1,6 @@
 {
     "server": [
-        "file",
-        "errorpage",
-        "cache-control",
-        "cors"
+        "file"
     ],
     "client": [
         
