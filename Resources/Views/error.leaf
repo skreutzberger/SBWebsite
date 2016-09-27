@@ -1,0 +1,30 @@
+#embed("embeds/header")
+
+<body>
+    <div class="flexContainer">
+        <header class="flexHeader">
+            <div class="menu">
+                <div class="logo">
+                    <a class="logo" href="/" title="SwiftyBeaver Home"></a>
+                </div>
+            </div>
+        </header>
+
+
+    <main class="flexMain">
+        <div class="main standard" style="margin-top: 20%;">
+            <h1>Oops, something went wrong!</h1>
+
+            <p style="margin-top: 20px; text-align: center;">
+            Please <a href="/"><u><b>click here</b></u></a> to go back to SwiftyBeaver Home or contact us at <a href="mailto:help@swiftybeaver.com"><u><b>help@swiftybeaver.com</b></u></a>. Thanks!
+            </p>
+        </div>
+    </main>
+
+        <!--<main>
+            <div class="main standard">
+                <h1>#(title)</h1>
+            </div>
+        </main>-->
+
+#embed("embeds/footer")

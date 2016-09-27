@@ -10,64 +10,61 @@ import HTTP
 import Vapor
 
 /**
- Handles the various Abort rrors that can be thrown
+ Handles the various Abort errors that can be thrown
  in any Vapor closure.
  
- To stop this behavior, remove the
- ErrorMiddleware for the Droplet's `middleware` array.
+ Renders a template associated with a given status code
  */
 public class ErrorPageMiddleware: Middleware {
     
-    private var errorView = "" // name of error view template
+    /// needs to be added after the middleware was added to the droplet
+    public var droplet = Droplet()
+
+    private var defaultErrorView = ""
+    private var errorViews = [Status: String]() // name of error view template
     
-    public init(_ errorView: String) {
-        self.errorView = errorView
+    /// accepts a default error view and optionally a dict of views per status
+    public init(_ defaultErrorView: String , errorViews: [Status: String]=[Status: String]()) {
+        self.defaultErrorView = defaultErrorView
+            self.errorViews = errorViews
     }
     
-    /**
-     Respond to a given request chaining to the next
-     
-     - parameter request: request to process
-     - parameter chain: next responder to pass request to
-     
-     - throws: an error on failure
-     
-     - returns: a valid response
-     */
     public func respond(to request: Request, chainingTo chain: Responder) throws -> Response {
         do {
             return try chain.respond(to: request)
         } catch Abort.badRequest {
-            return try ErrorPageMiddleware.errorResponse(request, .badRequest, "Invalid request")
+            return try errorResponse(request, status: .badRequest, message: "Invalid request")
         } catch Abort.notFound {
-            return try ErrorPageMiddleware.errorResponse(request, .notFound, "Page not found")
+            return try errorResponse(request, status: .notFound, message: "Page not found")
         } catch Abort.serverError {
-            return try ErrorPageMiddleware.errorResponse(request, .internalServerError, "Something went wrong")
+            return try errorResponse(request, status: .internalServerError, message: "Something went wrong")
         } catch Abort.custom(let status, let message) {
-            return try ErrorPageMiddleware.errorResponse(request, status, message)
+            return try errorResponse(request, status: status, message: message)
         }
     }
     
-    static func errorResponse(_ request: Request, _ status: Status, _ message: String) throws -> Response {
+    /// renders the view for the error status or default view if not set
+    func errorResponse(_ request: Request, status: Status, message: String) throws -> Response {
+       
+        // render default view template or a specific one for the error
+        var viewName = defaultErrorView
         
-        // log the error
-        log.error("\(status): \(message)")
-        
-        if request.accept.prefers("html") {
-            // TODO: how to render error view template here??
-            
-            //return ErrorView.shared.makeResponse(status, message)
-            //return Response(status: status, body: "")
-            //return try app.view.make("contact", ["title": message])
+        if let view = errorViews[status] {
+            viewName = view
         }
         
-        let json = try JSON(node: [
-            "error": true,
-            "message": "\(message)"
-            ])
-        let data = try json.makeBytes()
+        // log errors with error level and 404 with info level
+        if status == .notFound {
+            log.info("\(message): \(request.uri.path)")
+        } else {
+            log.error("\(status): \(request.uri.path) - \(message)")
+        }
+        
+        let renderedView = try droplet.view.make(viewName, ["title": Node(message)])
+        let data = try renderedView.makeBytes()
         let response = Response(status: status, body: .data(data))
-        response.headers["Content-Type"] = "application/json; charset=utf-8"
+        response.headers["Content-Type"] = "text/html; charset=utf-8"
+        
         return response
     }
     

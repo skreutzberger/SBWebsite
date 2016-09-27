@@ -46,7 +46,6 @@ final class CacheControlMiddleware: Middleware {
         log.verbose("setting cache-control for \(path) to \(cacheTTL) seconds")
         response.headers["Cache-Control"] = "public, max-age=\(cacheTTL)"
         response.headers["Vary"] = "Accept-Encoding"
-        
         return response
     }
 
