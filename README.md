@@ -26,7 +26,7 @@ Source code of [swiftybeaver.com](https://swiftybeaver.com) powered by server-si
 ### Included Custom Middleware:
 - **Cache Control** (set custom cache control header based on file types)
 - **CORS** (set cross-origin HTTP request for URL based on file types)
-- **Error Page** (WIP: catches & logs HTTP & system errors, renders error pages)
+- **Error Page** (catches & logs HTTP & system errors, renders error pages)
 
 See the [middleware folder](https://github.com/SwiftyBeaver/SBWebsite/tree/master/Sources/SBWebsite/Middleware) for more.
 <br/><br/>
