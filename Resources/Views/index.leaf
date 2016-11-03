@@ -53,9 +53,7 @@
                     <div class="circle appCircle circleShadow"></div>
                     <div class="content contentLeft">
                     <h2>Mac App</h2>
-                    The world’s first native Mac App for logging lets you instantly search and filter your logs with zero latency. All data is stored on your Mac in a SQLite database and can be easily exported for even deeper processing.<br/><br/>
-                    Live stream / real-time, user centric, searchable, own your data (export, mining), zero latency, monitor multiple apps in parallel, put next to Xcode.
-                    </div>
+                    The world’s first native Mac App for logging lets you instantly search and filter your logs with zero latency. All data is securely stored on your Mac in a SQLite database and can be easily exported for even deeper processing.</div>
                     <div class="stripe greenStripe"></div>
                     </div>
                     </div>
