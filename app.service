@@ -1,0 +1,23 @@
+# Systemd service file for a Vapor app
+# put in /lib/systemd/system
+# use: systemctl clean stop/start/reload/restart/status app.service
+#
+# put config files in /lib/systemd/system/app.service.d/myenv.conf
+
+[Unit]
+Description=Vapor Web App
+After=syslog.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/app
+ExecStart=/home/ubuntu/app/.build/release/SBWebsite --env=production
+Restart=on-abort
+
+#Type=idle
+#Environment=statedir=/var/cache/foo
+#ExecStartPre=/usr/bin/mkdir -p ${statedir}
+#ExecStart=/usr/local/bin/vapor run serve --env=production
+
+[Install]
+WantedBy=multi-user.target
