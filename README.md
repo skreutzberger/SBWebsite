@@ -31,6 +31,10 @@ Source code of [swiftybeaver.com](https://swiftybeaver.com) powered by server-si
 See the [middleware folder](https://github.com/SwiftyBeaver/SBWebsite/tree/master/Sources/SBWebsite/Middleware) for more.
 <br/><br/>
 
+## Deployment
+The project includes a deployment script and a Linux service file. Please read our dedicated [article](https://medium.com/swiftybeaver-blog/deployment-of-a-vapor-app-to-aws-ec2-f577eaa6c38c#.gc6t4srpa) about how you can deploy a production-ready Vapor web app like this one to Amazon Web Services EC2.
+
+<br/><br/>
 ## Learn More
 
 - [Website](https://swiftybeaver.com)
